@@ -4,7 +4,7 @@ from app1.models import Producto, Categoria
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
-   
+    
     list_display = ('nombre', 'mostrar_miniatura')
 
     readonly_fields = ('mostrar_imagen_detalle',)
