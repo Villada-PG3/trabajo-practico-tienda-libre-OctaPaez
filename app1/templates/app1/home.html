@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Tienda Libre</title>
-</head>
-<body>
+{% extends "app1/base.html" %}
 
-    <h1>Bienvenido a Tienda Libre</h1>
+{% block title %}
+Inicio | Tienda Libre
+{% endblock %}
 
-    <p>Mi primera página usando Django.</p>
+{% block content %}
 
-</body>
-</html>
+<div class="container text-center py-5">
+
+    <h1 class="display-4 fw-bold text-primary">
+        🏪Bienvenido a Tienda Libre
+    </h1>
+
+    <p class="lead mt-4">
+        Mi primera página usando Django.
+    </p>
+
+</div>
+
+{% endblock %}

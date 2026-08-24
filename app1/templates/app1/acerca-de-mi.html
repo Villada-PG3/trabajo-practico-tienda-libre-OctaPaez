@@ -1,31 +1,25 @@
-<!DOCTYPE html>
+{% extends "app1/base.html" %}
 
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Acerca de mí | Tienda Libre</title>
 
+{% block title %}
+Acerca de mí | Tienda Libre
+{% endblock %}
+
+
+{% block styles %}
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
 
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
         background: linear-gradient(135deg, #667eea, #764ba2);
         min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
     }
 
     .contenedor {
         background-color: white;
         width: 100%;
         max-width: 750px;
+        margin: 60px auto;
         padding: 45px;
         border-radius: 20px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
@@ -93,51 +87,55 @@
         background-color: #3f32b8;
         transform: translateY(-2px);
     }
+
 </style>
 
+{% endblock %}
 
-</head>
 
-<body>
-
+{% block content %}
 
 <div class="contenedor">
 
-    <div class="icono">👨‍💻</div>
+    <div class="icono">🏪</div>
 
-    <h1>¡Hola! Soy Octi, esarrollador en formación en el ITSV</h1>
+    <h1>¡Hola! Soy Octi, desarrollador en formación en el ITSV</h1>
 
     <p class="subtitulo">
         Conociendo y aprendiendo nuevas tecnologías para crear aplicaciones web.
     </p>
 
     <div class="info">
+
         <h2>Acerca de mí</h2>
 
         <p>
             Soy estudiante y actualmente me encuentro aprendiendo desarrollo
-            web y programación. Junto a un estudio en base de datos.
+            web y programación, junto a mis estudios de bases de datos.
         </p>
 
         <p>
             Estoy trabajando con tecnologías como Python y Django, aprendiendo
             cómo crear aplicaciones web dinámicas y organizar proyectos utilizando
-            buenas prácticas. Además del manejo de MySQL.
+            buenas prácticas. Además, estoy aprendiendo el manejo de MySQL.
         </p>
 
         <div class="habilidades">
+
             <span class="habilidad">Python</span>
             <span class="habilidad">Django</span>
             <span class="habilidad">HTML</span>
             <span class="habilidad">CSS</span>
             <span class="habilidad">Bases de Datos</span>
+
         </div>
+
     </div>
 
-    <a href="/" class="boton">← Volver al inicio</a>
+    <a href="/" class="boton">
+        ← Volver al inicio
+    </a>
 
 </div>
 
-
-</body>
-</html>
+{% endblock %}
