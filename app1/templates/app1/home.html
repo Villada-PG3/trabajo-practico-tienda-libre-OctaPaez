@@ -29,11 +29,11 @@ Inicio
                     <div class="card-body">
 
                         <h5 class="card-title">
-                            {{ producto.nombre }}
+                            {{ producto.nombre|title }}
                         </h5>
 
                         <p class="card-text">
-                            {{ producto.descripcion }}
+                            {{ producto.descripcion|truncatechars:40 }}
                         </p>
 
                         <p>
@@ -43,15 +43,23 @@ Inicio
 
                         <p>
                             <strong>Precio:</strong>
-                            ${{ producto.precio }}
+                            {%if producto.precio == None%}
+                                {{producto.precio|default:"Precio sin asignar"}}
+                            {%else%}
+                                ${{ producto.precio|floatformat:2}}
+                            {%endif%}
                         </p>
 
                     </div>
 
                 </div>
+            
 
             </div>
-
+            {%empty%}
+                <div class="alert alert-warning">
+                No hay productos registrados.
+                </div>  
         {% endfor %}
 
     </div>
