@@ -24,6 +24,10 @@ sp.categoria
 capilar  = Categoria.objects.get(nombre="Capilar")
 capilar.productos.all()
 
+* 11
+nueva_categoria = Categoria.objects.create(nombre='categoria prueba', slug='categoria_prueba')
+Categoria.objects.get(nombre='categoria prueba')
+
 # Resultados en consola
 * 1
 <QuerySet [<Producto: Acondicionador Dove - Dove - $8000.00 - Stock: 100>, <Producto: Acondicionador TRESemmé anti frizz - TRESemmé - $9000.00 - Stock: 100>, <Producto: Aquaphor Eucerin - Eucerin - $14000.00 - Stock: 30>, <Producto: Centella Protector Solar - Centella - $40000.00 - Stock: 3>, <Producto: Dermaglós Protector Solar - Dermaglós - $9000.00 - Stock: 20>, <Producto: HIdratante de manos Neutrógena - Neutrógena - $13000.00 - Stock: 10>, <Producto: HIdratante de manos cerave - Cerave - $14000.00 - Stock: 10>, <Producto: Hidratante Labial Burts Bees - Burts Bees - $15000.00 - Stock: 20>, <Producto: Hidratante Labial ISDIN - ISDIN - $13000.00 - Stock: 30>, <Producto: Hidratante Labial Nivea - Nivea - $5000.00 - Stock: 60>, <Producto: Hidratante de manos Caviahue - Caviahue - $12000.00 - Stock: 20>, <Producto: Hidratante de manos Dermaglos - Dermaglós - $1000.00 - Stock: 30>, <Producto: Hyalu B5 La Roche Possay - La Roche Possay - $40000.00 - Stock: 9>, <Producto: Life Activ VIchy - Vichy - $60000.00 - Stock: 5>, <Producto: Mela B3 La Roche Possay - La Roche Possay - $60000.00 - Stock: 5>, <Producto: Neutrogena Protector Solar Sun Fresh - Neutrógena - $14000.00 - Stock: 10>, <Producto: Retino B3 La Roche Possay - La Roche Possay - $80000.00 - Stock: 3>, <Producto: Shampoo Aveno - Aveno - $10000.00 - Stock: 40>, <Producto: Shampoo Pantene - Pantene - $7000.00 - Stock: 200>, <Producto: sunscreen fps50 - Nivea - $11000.00 - Stock: 23>]>
@@ -54,3 +58,6 @@ capilar.productos.all()
 
 * 10
 <QuerySet [<Producto: Acondicionador Dove - Dove - $8000.00 - Stock: 100>, <Producto: Acondicionador TRESemmé anti frizz - TRESemmé - $9000.00 - Stock: 100>, <Producto: Shampoo Aveno - Aveno - $10000.00 - Stock: 40>, <Producto: Shampoo Pantene - Pantene - $7000.00 - Stock: 200>]>
+
+* 11
+<Categoria: categoria prueba>
