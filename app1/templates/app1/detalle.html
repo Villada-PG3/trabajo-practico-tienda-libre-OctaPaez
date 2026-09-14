@@ -1,0 +1,65 @@
+{% extends "app1/base.html" %}
+
+{% block title %}
+{{ producto.nombre }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h1 class="card-title">
+                {{ producto.nombre|title }}
+            </h1>
+
+            <p class="card-text">
+                {{ producto.descripcion }}
+            </p>
+
+            <p>
+                <strong>Marca:</strong>
+                {{ producto.marca }}
+            </p>
+
+            <p>
+                <strong>Stock:</strong>
+                {{ producto.stock }}
+            </p>
+
+            <p>
+                <strong>Precio:</strong>
+
+                {% if producto.precio == None %}
+                    Precio sin asignar
+                {% else %}
+                    ${{ producto.precio|floatformat:2 }}
+                {% endif %}
+
+            </p>
+
+            <p>
+                <strong>Categoría:</strong>
+
+                {% if producto.categoria %}
+                    {{ producto.categoria.nombre }}
+                {% else %}
+                    Sin categoría
+                {% endif %}
+
+            </p>
+
+            <a href="{% url 'catalogo' %}" class="btn btn-secondary">
+                ← Volver al catálogo
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
