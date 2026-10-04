@@ -1,3 +1,4 @@
+
 {% extends "app1/base.html" %}
 
 {% block title %}
@@ -9,6 +10,16 @@
 <div class="container py-5">
 
     <div class="card">
+
+        {% if producto.imagen %}
+            <div class="text-center p-4">
+                <img
+                    src="{{ producto.imagen.url }}"
+                    class="detalle-imagen"
+                    alt="{{ producto.nombre }}"
+                >
+            </div>
+        {% endif %}
 
         <div class="card-body">
 
@@ -52,7 +63,10 @@
 
             </p>
 
-            <a href="{% url 'catalogo' %}" class="btn btn-secondary">
+            <a
+                href="{% url 'catalogo' %}"
+                class="btn btn-secondary"
+            >
                 ← Volver al catálogo
             </a>
 
